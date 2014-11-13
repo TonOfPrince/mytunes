@@ -4,8 +4,12 @@
 
 .libraryEntry:hover {
   cursor:pointer;
+  /*font-family: sans-serif;*/
 }
 
+td {
+
+}
 .library {
 
 }
