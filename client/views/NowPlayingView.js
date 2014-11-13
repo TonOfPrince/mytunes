@@ -1,5 +1,6 @@
 var NowPlayingView = Backbone.View.extend({
   tagName:'span',
+  className:'nowPlaying',
 
   initialize: function() {
     var that = this;

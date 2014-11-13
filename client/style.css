@@ -1,0 +1,35 @@
+.libraryEntry {
+
+}
+
+.libraryEntry:hover {
+  cursor:pointer;
+}
+
+.library {
+
+}
+
+.nowPlaying {
+  color: gold;
+}
+
+.player {
+
+}
+
+.songQueueEntry {
+  font-style:italic;
+}
+
+.songQueueEntry:hover {
+  cursor:pointer;
+}
+
+.songQueue {
+
+}
+
+th {
+  font-family:sans-serif;
+}
