@@ -32,7 +32,7 @@ describe('PlayerView', function() {
   });
 
   describe('Song transitions', function() {
-    xit('dequeues a song when finished playing & plays the next song', function(){
+    it('dequeues a song when finished playing & plays the next song', function(){
       var firstSong = library.at(0)
         , secondSong = library.at(1)
         , thirdSong = library.at(2)
@@ -51,6 +51,17 @@ describe('PlayerView', function() {
       $(appView.playerView.el).trigger('ended');
       expect(appView.playerView.model).to.equal(thirdSong);
     });
+  });
+
+  describe('Player UI',function(){
+    it('shows the song title in the player', function() {
+      var firstSong = library.at(0);
+      songQueue = appView.model.get('songQueue');
+      songQueue.add(firstSong);
+      expect(appView.playerView.$el.next().text()).to.equal(firstSong.get('artist') + ': ' + firstSong.get('title'));
+
+    });
+
   });
 
 });
