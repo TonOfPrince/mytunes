@@ -21,12 +21,12 @@ var SongModel = Backbone.Model.extend({
     this.trigger('ended', this);
   },
 
-  // initialize: function() {
-  //   var that = this;
-  //   this.on('enqueue', function(song) {
-  //     debugger;
-  //     that.enqueue();
-  //   });
-  // }
+  initialize: function() {
+    this.set('plays', 0);
+    this.on('ended',function(){
+      // debugger;
+      this.set('plays',this.get('plays') + 1);
+    });
 
+  }
 });

@@ -5,7 +5,17 @@ var LibraryView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
+    // var that = this;
+    // this.collection.map(function(model){
+    //   model.on('change',function(){
+    //     that.render();
+    //   });
+    // });
 
+    this.collection.on('ended',function(){
+      // debugger;
+      this.render();
+    },this);
 
   },
 
