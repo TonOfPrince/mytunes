@@ -7,6 +7,7 @@ var LibraryEntryView = Backbone.View.extend({
     this.votesView = new VotesView({model: this.model});
     this.downArrowView = new DownArrowView({model: this.model});
     this.songView = new SongView({model: this.model});
+    this.addToPlaylistView = new AddToPlaylistView({model: this.model});
   },
 
   tagName: 'tr',
@@ -23,7 +24,9 @@ var LibraryEntryView = Backbone.View.extend({
       this.upArrowView.render(),
       this.votesView.render(),
       this.downArrowView.render(),
-      this.songView.render()])
+      this.songView.render(),
+      this.addToPlaylistView.render()
+      ])
   }
 
 });

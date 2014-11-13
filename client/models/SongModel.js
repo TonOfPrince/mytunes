@@ -29,6 +29,14 @@ var SongModel = Backbone.Model.extend({
     this.trigger('downvote', this);
   },
 
+  addToPlaylist: function(){
+    this.trigger('addToPlaylist', this);
+  },
+
+  removeFromPlaylist: function(){
+    this.trigger('removeFromPlaylist', this);
+  },
+
   initialize: function() {
     this.set('plays', 0);
     this.set('votes', 0);
@@ -38,6 +46,7 @@ var SongModel = Backbone.Model.extend({
     });
     this.on('upvote',function(){
       // debugger;
+      // if (!user.hasVoted)
       this.set('votes',this.get('votes') + 1);
     });
     this.on('downvote',function(){
