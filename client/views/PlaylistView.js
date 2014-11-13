@@ -4,7 +4,9 @@ var PlaylistView = Backbone.View.extend({
 
   className: 'playlist',
 
+
   initialize: function() {
+    this.playPlaylistView = new PlayPlaylistView({collection: this.collection});
     this.render();
     var that = this;
 
@@ -23,7 +25,7 @@ var PlaylistView = Backbone.View.extend({
     // see http://api.jquery.com/detach/
     this.$el.children().detach();
 
-    this.$el.html('<th>Playlist</th>').append(
+    this.$el.html('<th>Playlist</th>').append(this.playPlaylistView.$el).append(
       this.collection.map(function(song){
         return new PlaylistEntryView({model: song}).render();
       })

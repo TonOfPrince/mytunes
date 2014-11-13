@@ -17,4 +17,9 @@ var Playlist = Songs.extend({
 
   },
 
+  playPlaylist: function(){
+    console.log('clicked');
+    this.trigger('playPlaylist',this);
+  }
+
 });
