@@ -14,9 +14,13 @@ var LibraryView = Backbone.View.extend({
     //   });
     // });
 
-    this.collection.on('ended',function(){
+    this.collection.on('ended upvote downvote',function(){
       this.render();
     },this);
+
+    // this.collection.on('upvote',function(){
+    //   this.render();
+    // },this);
 
   },
 

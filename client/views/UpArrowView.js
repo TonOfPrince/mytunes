@@ -9,6 +9,12 @@ var UpArrowView = Backbone.View.extend({
 
   },
 
+  events: {
+    'click': function() {
+      this.model.upvote();
+    }
+  },
+
   render: function(){
     return this.$el.html(this.template());
   },

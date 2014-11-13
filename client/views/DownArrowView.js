@@ -9,6 +9,12 @@ var DownArrowView = Backbone.View.extend({
 
   },
 
+  events: {
+    'click': function() {
+      this.model.downvote();
+    }
+  },
+
   render: function(){
     return this.$el.html(this.template());
   },
