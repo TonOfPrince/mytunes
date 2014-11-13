@@ -35,4 +35,15 @@ describe('SongQueueView', function() {
     expect(view.render).to.have.been.called;
   });
 
+  it('removes a song from the queue when clicked',function(){
+    view = new SongQueueView({collection: fakeSongs});
+    view.collection.add({
+      artist: 'data',
+      url: '/test/testsong3.mp3',
+      title:'test song 3'
+    });
+    view.$el.children().first().next().children().first().click();
+    expect(view.collection.length).to.equal(2);
+  });
+
 });

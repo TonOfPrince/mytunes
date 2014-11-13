@@ -58,7 +58,7 @@ describe('PlayerView', function() {
       var firstSong = library.at(0);
       songQueue = appView.model.get('songQueue');
       songQueue.add(firstSong);
-      expect(appView.playerView.$el.next().text()).to.equal(firstSong.get('artist') + ': ' + firstSong.get('title'));
+      expect(appView.nowPlayingView.$el.text()).to.equal('Now Playing: ' + firstSong.get('artist') + ' - ' + firstSong.get('title'));
 
     });
 
